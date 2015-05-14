@@ -97,7 +97,7 @@ class BlockdiagMagics(Magics):
         try:
             tmpdir = tempfile.mkdtemp()
             fd, diag_name = tempfile.mkstemp(dir=tmpdir)
-            f = os.fdopen(fd, "w")
+            f = os.fdopen(fd, "wb")
             f.write(code.encode('utf-8'))
             f.close()
 
