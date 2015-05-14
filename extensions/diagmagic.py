@@ -113,7 +113,7 @@ class BlockdiagMagics(Magics):
             # do not use PIL library when rendering to SVG
             # this allows avoid problem with handling unicode in diagram
             if _draw_mode == 'SVG':
-                argv += ['--ignore-pil']
+                argv += ['']
 
             # Run command
             command.main(argv)
