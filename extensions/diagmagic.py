@@ -135,12 +135,14 @@ class BlockdiagMagics(Magics):
         if _publish_mode == 'SVG':
             publish_display_data(
                 u'IPython.core.displaypub.publish_svg',
+                None,
                 {'image/svg+xml':data}
             )
         else:
             publish_display_data(
+                {'image/png':data},
+                None,
                 u'IPython.core.displaypub.publish_png',
-                {'image/png':data}
             )
 
     @cell_magic
